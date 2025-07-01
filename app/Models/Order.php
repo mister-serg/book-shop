@@ -4,8 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-
 
 class Order extends Model
 {
@@ -13,7 +13,6 @@ class Order extends Model
 
     protected $fillable = [
         'user_id',
-        'book_id',
         'quantity',
         'total_cost',
         'status'
@@ -23,9 +22,11 @@ class Order extends Model
     {
         return $this->belongsTo(User::class);
     }
-}
 
-public function books ()
-{
-    return $this->belongsToMany(Book::class);
+    // Добавляем метод books() внутри класса
+    public function books(): BelongsToMany
+    {
+        return $this->belongsToMany(Book::class);
+
+    }
 }
