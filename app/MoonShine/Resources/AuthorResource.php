@@ -7,11 +7,12 @@ namespace App\MoonShine\Resources;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Author;
 
-use MoonShine\Laravel\Resources\ModelResource;
-use MoonShine\UI\Components\Layout\Box;
-use MoonShine\UI\Fields\ID;
-use MoonShine\Contracts\UI\FieldContract;
-use MoonShine\Contracts\UI\ComponentContract;
+use MoonShine\Fields\Text;
+use MoonShine\Resources\ModelResource;
+use MoonShine\Decorations\Block;
+use MoonShine\Fields\ID;
+use MoonShine\Fields\Field;
+use MoonShine\Components\MoonShineComponent;
 
 /**
  * @extends ModelResource<Author>
@@ -22,36 +23,49 @@ class AuthorResource extends ModelResource
 
     protected string $title = 'Authors';
 
-    /**
-     * @return list<FieldContract>
-     */
-    protected function indexFields(): iterable
+//    /**
+//     * @return list<MoonShineComponent|Field>
+//     */
+//    public function fields(): array
+//    {
+//        return [
+//            Block::make([
+//                ID::make()->sortable(),
+//            ]),
+//        ];
+//    }
+    public function indexFields(): array
     {
         return [
             ID::make()->sortable(),
+            Text::make('Name')->sortable(),
+            Text::make('Surname')->sortable(),
         ];
     }
 
-    /**
-     * @return list<ComponentContract|FieldContract>
-     */
-    protected function formFields(): iterable
-    {
-        return [
-            Box::make([
-                ID::make(),
-            ])
-        ];
-    }
-
-    /**
-     * @return list<FieldContract>
-     */
-    protected function detailFields(): iterable
+    public function formFields(): array
     {
         return [
             ID::make(),
+            Text::make('Name'),
+            Text::make('Surname'),
+            Text::make('Biography')->nullable(),
         ];
+    }
+
+    public function detailFields(): array
+    {
+        return [
+            ID::make(),
+            Text::make('Name'),
+            Text::make('Surname'),
+            Text::make('Biography'),
+        ];
+    }
+
+    public function search(): array
+    {
+        return ['surname', 'biography'];
     }
 
     /**
@@ -60,7 +74,7 @@ class AuthorResource extends ModelResource
      * @return array<string, string[]|string>
      * @see https://laravel.com/docs/validation#available-validation-rules
      */
-    protected function rules(mixed $item): array
+    public function rules(Model $item): array
     {
         return [];
     }

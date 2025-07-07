@@ -48,6 +48,7 @@ return [
         'username' => 'Username',
         'email' => 'E-mail',
         'password' => 'Password',
+        'or_socials' => 'or',
     ],
     'resource' => [
         'system' => 'System',
@@ -65,17 +66,21 @@ return [
         'main_information' => 'Main information',
         'change_password' => 'Change password',
 
+        'link_socialite' => 'Link account',
+        'linked_socialite' => 'Account linked',
+
         'queued' => 'Queued',
 
         'export' => [
             'exported' => 'File exported',
+            'confirm_content' => 'Confirm data export',
         ],
 
         'import' => [
             'imported' => 'Imported',
             'file_required' => 'File is required',
-            'extension_not_supported' => 'File extension not supported',
-        ],
+            'extension_not_supported' => 'File extension not supported'
+        ]
     ],
     'choices' => [
         'no_results' => 'No results found',
@@ -86,5 +91,5 @@ return [
         'add_item' => 'Press Enter to add ":value"',
         'max_item' => 'Only :count values can be added',
         'remove_item' => 'Remove item',
-    ],
+    ]
 ];
