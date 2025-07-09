@@ -11,6 +11,14 @@ class Order extends Model
 {
     use HasFactory;
 
+    public const STATUSES = [
+        'new',
+        'in_progress',
+        'completed',
+        'canceled',
+        'finished',
+    ];
+
     protected $fillable = [
         'user_id',
         'book_id',
