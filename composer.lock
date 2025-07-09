@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "48fd668d470253244ab579bd8122cafc",
+    "content-hash": "5dc2367439b888a32aaf208c62995bad",
     "packages": [
         {
             "name": "brick/math",
@@ -2105,36 +2105,36 @@
         },
         {
             "name": "moonshine/moonshine",
-            "version": "2.23.5",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/moonshine-software/moonshine.git",
-                "reference": "7dcb1494b35a493021197a1a2a615536dcbf5143"
+                "reference": "822fbed43e81ad2a5bf0d6333e6ff507cfabf198"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/moonshine-software/moonshine/zipball/7dcb1494b35a493021197a1a2a615536dcbf5143",
-                "reference": "7dcb1494b35a493021197a1a2a615536dcbf5143",
+                "url": "https://api.github.com/repos/moonshine-software/moonshine/zipball/822fbed43e81ad2a5bf0d6333e6ff507cfabf198",
+                "reference": "822fbed43e81ad2a5bf0d6333e6ff507cfabf198",
                 "shasum": ""
             },
             "require": {
                 "ext-curl": "*",
                 "ext-json": "*",
                 "lee-to/laravel-package-command": "^0.9",
-                "php": "^8.1|^8.2|^8.3",
-                "rap2hpoutre/fast-excel": "^5.4"
+                "php": "^8.1|^8.2",
+                "rap2hpoutre/fast-excel": "^5.0"
             },
             "conflict": {
                 "laravel/framework": "<10.20.0"
             },
             "require-dev": {
                 "mockery/mockery": "^1.6",
-                "nunomaduro/larastan": "^2.9",
-                "orchestra/testbench": "^8.0|^9.0",
-                "pestphp/pest": "^2.34",
+                "nunomaduro/larastan": "^2.6",
+                "orchestra/testbench": "^8.14",
+                "pestphp/pest": "^2.24.2",
                 "pestphp/pest-plugin-laravel": "^2.2",
                 "pestphp/pest-plugin-mock": "^2.0",
-                "rector/rector": "^1.0"
+                "rector/rector": "^0.18"
             },
             "suggest": {
                 "laravel/socialite": "Required to use the Socialite",
@@ -2153,8 +2153,7 @@
                     "src/helpers.php"
                 ],
                 "psr-4": {
-                    "MoonShine\\": "src/",
-                    "MoonShine\\Database\\Factories\\": "database/factories/"
+                    "MoonShine\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2190,7 +2189,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2025-02-09T08:14:30+00:00"
+            "time": "2023-11-13T07:37:30+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2592,16 +2591,16 @@
         },
         {
             "name": "openspout/openspout",
-            "version": "v4.25.0",
+            "version": "v4.30.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/openspout/openspout.git",
-                "reference": "519affe730d92e1598720a6467227fc28550f0e6"
+                "reference": "4550fc0dbf01aff86d12691f8a7f6ce22d2b2edc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/openspout/openspout/zipball/519affe730d92e1598720a6467227fc28550f0e6",
-                "reference": "519affe730d92e1598720a6467227fc28550f0e6",
+                "url": "https://api.github.com/repos/openspout/openspout/zipball/4550fc0dbf01aff86d12691f8a7f6ce22d2b2edc",
+                "reference": "4550fc0dbf01aff86d12691f8a7f6ce22d2b2edc",
                 "shasum": ""
             },
             "require": {
@@ -2611,17 +2610,17 @@
                 "ext-libxml": "*",
                 "ext-xmlreader": "*",
                 "ext-zip": "*",
-                "php": "~8.1.0 || ~8.2.0 || ~8.3.0"
+                "php": "~8.3.0 || ~8.4.0"
             },
             "require-dev": {
                 "ext-zlib": "*",
-                "friendsofphp/php-cs-fixer": "^3.64.0",
-                "infection/infection": "^0.29.6",
-                "phpbench/phpbench": "^1.3.1",
-                "phpstan/phpstan": "^1.12.4",
-                "phpstan/phpstan-phpunit": "^1.4.0",
-                "phpstan/phpstan-strict-rules": "^1.6.1",
-                "phpunit/phpunit": "^10.5.20 || ^11.3.6"
+                "friendsofphp/php-cs-fixer": "^3.80.0",
+                "infection/infection": "^0.30.1",
+                "phpbench/phpbench": "^1.4.1",
+                "phpstan/phpstan": "^2.1.17",
+                "phpstan/phpstan-phpunit": "^2.0.6",
+                "phpstan/phpstan-strict-rules": "^2.0.4",
+                "phpunit/phpunit": "^12.2.6"
             },
             "suggest": {
                 "ext-iconv": "To handle non UTF-8 CSV files (if \"php-mbstring\" is not already installed or is too limited)",
@@ -2669,7 +2668,7 @@
             ],
             "support": {
                 "issues": "https://github.com/openspout/openspout/issues",
-                "source": "https://github.com/openspout/openspout/tree/v4.25.0"
+                "source": "https://github.com/openspout/openspout/tree/v4.30.1"
             },
             "funding": [
                 {
@@ -2681,7 +2680,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-09-24T09:03:42+00:00"
+            "time": "2025-07-07T06:15:55+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -8534,12 +8533,12 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.1"
     },
-    "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
 }

@@ -73,7 +73,6 @@ return [
 
         'export' => [
             'exported' => 'File exported',
-            'confirm_content' => 'Confirm data export',
         ],
 
         'import' => [
@@ -81,15 +80,5 @@ return [
             'file_required' => 'File is required',
             'extension_not_supported' => 'File extension not supported'
         ]
-    ],
-    'choices' => [
-        'no_results' => 'No results found',
-        'no_choices' => 'No choices to choose from',
-        'item_select' => 'Press to select',
-        'unique_item' => 'Only unique values can be added',
-        'custom_add_item' => 'Only values matching specific conditions can be added',
-        'add_item' => 'Press Enter to add ":value"',
-        'max_item' => 'Only :count values can be added',
-        'remove_item' => 'Remove item',
     ]
 ];
