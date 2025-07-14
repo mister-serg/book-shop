@@ -50,7 +50,7 @@ class BookResource extends ModelResource
             ->allowedExtensions(['jpg', 'jpeg', 'png', 'webp'])
             ->removable()
             ->nullable(),
-            CKEditor::make('Label')->nullable(),
+            CKEditor::make('Description')->nullable(),
             Text::make('Publication Year', 'publication_year'),
             BelongsTo::make('Author', formatted: fn($author)=> "$author->name $author->surname"),
             BelongsTo::make('Genre', formatted: 'name'),
@@ -65,7 +65,7 @@ class BookResource extends ModelResource
             ID::make(),
             Text::make('Title'),
             Image::make('Cover'),
-            CKEditor::make('Label'),
+            CKEditor::make('Description'),
             Text::make('Publication Year', 'publication_year'),
             BelongsTo::make('Author', formatted: fn($author)=> "$author->name $author->surname"),
             BelongsTo::make('Genre', formatted: 'name'),

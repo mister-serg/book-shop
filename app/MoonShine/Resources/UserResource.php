@@ -12,6 +12,7 @@ use MoonShine\Decorations\Block;
 use MoonShine\Fields\ID;
 use MoonShine\Fields\Field;
 use MoonShine\Components\MoonShineComponent;
+use MoonShine\Fields\Password;
 
 /**
  * @extends ModelResource<User>
@@ -30,8 +31,16 @@ class UserResource extends ModelResource
         return [
             Block::make([
                 ID::make()->sortable(),
+                Text::make('Name')->sortable(),
+                Text::make('Email')->sortable(),
+                Password::make('Password')->hideOnIndex(),
             ]),
         ];
+    }
+
+    public function search(): array
+    {
+        return ['name', 'email'];
     }
 
     /**

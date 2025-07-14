@@ -22,7 +22,7 @@ class Book extends Model
     ];
 
     protected $casts = [
-        'publication_year' => 'date:Y',
+        'publication_year' => 'string',
     ];
 
     public function author(): BelongsTo
