@@ -12,6 +12,7 @@ class IndexController extends Controller
     {
         $books = Book::existBooks()->get();
         $authors = Author::whoseBooksExist()->get();
-    dd($books, $authors);
+
+        return view('index', compact('books', 'authors'));
     }
 }
