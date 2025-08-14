@@ -36,4 +36,9 @@ class Author extends Model
             ->get()
         ;
     }
+
+    public function getFullName(): string
+    {
+        return $this->name . ' ' . $this->surname;
+    }
 }
