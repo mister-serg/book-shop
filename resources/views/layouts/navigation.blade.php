@@ -61,14 +61,17 @@
 					</div>
 					<div class="col-md-6 col-sm-6 col-6 col-lg-2">
 						<ul class="header__sidebar__right d-flex justify-content-end align-items-center">
-							<li class="shopcart"><a class="cartbox_active" href="#"><span class="product_qun">{{ $cart->count }}</span></a>
+							<li class="shopcart">
+								<a class="cartbox_active" href="#">
+									<span class="product_qun">{{ $cart->count ?? ''}}</span>
+								</a>
 								<!-- Start Shopping Cart -->
 								<div class="block-minicart minicart__active">
 									<div class="minicart-content-wrapper">
 										<div class="micart__close">
 											<span>close</span>
 										</div>
-										@if($cart->count < 0)
+										@if(!$cart || cart->count <= 0)
 											<div class="content">
 												<h6>Your cart is empty</h6>
 											</div>
